@@ -21,6 +21,11 @@ return new class extends Migration
             $table->string('password');
         });
 
+        Schema::table('dosens', function(Blueprint $table)
+        {
+            $table->rememberToken();
+        });
+
         
     }
 
