@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\dosen;
+use App\Models\bahanAjar;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-
-class DosenSeeder extends Seeder
+class BahanAjarSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,6 +15,6 @@ class DosenSeeder extends Seeder
      */
     public function run()
     {
-        dosen::factory()->create();
+         BahanAjar::factory()->count(3)->create();
     }
 }

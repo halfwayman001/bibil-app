@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dosen;
+use App\Models\lecture;
 use Illuminate\Http\Request;
 
-class DosenController extends Controller
+class LectureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class DosenController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\dosen  $dosen
+     * @param  \App\Models\lecture  $lecture
      * @return \Illuminate\Http\Response
      */
-    public function show(dosen $dosen)
+    public function show(lecture $lecture)
     {
         //
     }
@@ -52,10 +52,10 @@ class DosenController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\dosen  $dosen
+     * @param  \App\Models\lecture  $lecture
      * @return \Illuminate\Http\Response
      */
-    public function edit(dosen $dosen)
+    public function edit(lecture $lecture)
     {
         //
     }
@@ -64,10 +64,10 @@ class DosenController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\dosen  $dosen
+     * @param  \App\Models\lecture  $lecture
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, dosen $dosen)
+    public function update(Request $request, lecture $lecture)
     {
         //
     }
@@ -75,10 +75,10 @@ class DosenController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\dosen  $dosen
+     * @param  \App\Models\lecture  $lecture
      * @return \Illuminate\Http\Response
      */
-    public function destroy(dosen $dosen)
+    public function destroy(lecture $lecture)
     {
         //
     }

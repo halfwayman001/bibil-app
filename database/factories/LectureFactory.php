@@ -3,13 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\mahasiswa>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Lecture>
  */
-class mahasiswaFactory extends Factory
+class LectureFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,12 +18,11 @@ class mahasiswaFactory extends Factory
     public function definition()
     {
         return [
-            'nama' => fake()->name(),
-            'NIM' => '201511047',
+            'name' => fake()->name(),
+            'NIP' => '00813920053122',
             'email' => fake()->unique()->safeEmail(),
-            'password' => Hash::make('mahasiswa'),
-            'remember_token' => Str::random(10),
-            'foto' => 'dummy.jpg'
+            'foto' => 'dummy2.jpg',
+            'password' => Hash::make('lecture'),
         ];
     }
 }
