@@ -17,16 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('nama', 50);
             $table->string('NIP', 18);
+            $table->string('no_telepon',13);
             $table->string('email');
+            $table->string('foto')->nullable();
             $table->string('password');
         });
 
-        Schema::table('dosens', function(Blueprint $table)
-        {
-            $table->rememberToken();
-        });
-
-        
     }
 
     /**
