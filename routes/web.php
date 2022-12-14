@@ -16,6 +16,18 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/hello', function () {
+    return Inertia::render('Hello', [
+        'name' => 'World',
+    ]);
+});
+
+Route::get('/regist', function () {
+    return Inertia::render('Regist', [
+        'name' => 'World',
+    ]);
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
