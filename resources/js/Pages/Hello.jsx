@@ -90,7 +90,7 @@ export default function Login(props) {
                         <p class="text-green-600 mb-5 text-lg">
                             Don't have an account?{" "}
                             <a
-                                href="/register"
+                                href="/regist"
                                 class="text-green-600 mb-5 text-lg underline"
                             >
                                 Register
