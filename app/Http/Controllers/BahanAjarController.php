@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\bahanAjar;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class BahanAjarController extends Controller
 {
@@ -14,7 +15,10 @@ class BahanAjarController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render('BahanAjar',[
+            'title' => 'LePlace',
+            'description' => 'Halaman Bahan Ajar',
+        ]);
     }
 
     /**
@@ -35,7 +39,13 @@ class BahanAjarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $BahanAjar = new bahanAjar();
+        $BahanAjar->title = $request->judul_materi;
+        $BahanAjar->description = $request->deskripsi;
+        $BahanAjar->minggu_ke = $request->minggu_ke;
+        $BahanAjar->file = $request->file_materi;
+        $BahanAjar->save();
+        return redirect()->back()->with('message', 'Bahan Ajar Telah Berhasil Diunggah');
     }
 
     /**
@@ -46,7 +56,10 @@ class BahanAjarController extends Controller
      */
     public function show(bahanAjar $bahanAjar)
     {
-        //
+        //bahanAjar = $bahanAjar::where('author', auth()->user()->email)->get();
+        return Inertia::render('Dashboard',[
+            'bahanAjar' => $bahanAjar,
+        ]);
     }
 
     /**

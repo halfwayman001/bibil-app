@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('judul_materi');
             $table->text('deskripsi');
+            $table->string('minggu_ke');
             $table->string('file_materi')->nullable();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->timestamp('created_at')->useCurrent();

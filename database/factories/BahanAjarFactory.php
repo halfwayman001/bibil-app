@@ -19,6 +19,7 @@ class BahanAjarFactory extends Factory
         return [
             'judul_materi' => fake()->sentence(),
             'deskripsi' => fake()->paragraph(2, true),
+            'minggu_ke' => fake()->sentence(),
             'file_materi' => 'CS605-Software Engineering Practitioner’s Approach  by Roger S. Pressman 7th ed.pdf' 
         ];
     }
