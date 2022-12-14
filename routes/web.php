@@ -17,6 +17,18 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/hello', function () {
+    return Inertia::render('Hello', [
+        'name' => 'World',
+    ]);
+});
+
+Route::get('/regist', function () {
+    return Inertia::render('Regist', [
+        'name' => 'World',
+    ]);
+});
+
 Route::get('/BahanAjar', [BahanAjarController::class, 'index']);
 Route::post('/BahanAjar', [BahanAjarController::class, 'store'])->middleware(['auth', 'verified'])->name('create.BahanAjar');
 Route::get('/BahanAjar', [BahanAjarController::class, 'show'])->middleware(['auth', 'verified'])->name('bahan.Ajar');
